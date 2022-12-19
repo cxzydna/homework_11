@@ -48,6 +48,6 @@ def get_candidate_by_skill(skill_name, data):
     """
     result = []
     for candidate in data:
-        if skill_name in candidate["skills"]:
+        if skill_name.lower() in candidate["skills"].lower().split(", "):
             result.append(candidate)
     return result
